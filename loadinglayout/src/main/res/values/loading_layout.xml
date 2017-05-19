@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="LoadingLayout">
+		<attr name="loadingLayoutId"
+			format="reference"/>
+		<attr name="loadingTextId"
+			format="reference"/>
+		<attr name="errorLayoutId"
+			format="reference"/>
+		<attr name="errorTextId"
+			format="reference"/>
+		<attr name="contentViewId"
+			format="reference"/>
+	</declare-styleable>
+	<declare-styleable name="LoadingLayout_Layout">
+		<attr name="notHide"
+			format="boolean"/>
+	</declare-styleable>
+</resources>
