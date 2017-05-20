@@ -98,7 +98,11 @@ public class LoadingLayout extends FrameLayout {
 		} else {
 			errorLayout = inflater.inflate(errorLayoutId, null);
 			errorText = (TextView) errorLayout.findViewById(errorTextId);
+			if (errorText == null) {
+				throw new IllegalStateException("设置了error layout id，但是没设置error text id");
+			}
 		}
+		errorText.setGravity(Gravity.CENTER);
 		LayoutParams errorLP = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, true);
 		errorLP.gravity = Gravity.CENTER;
 		errorLayout.setVisibility(GONE);
