@@ -94,6 +94,7 @@ public class LoadingLayout extends FrameLayout {
 
 		if (errorLayoutId == 0) {
 			errorText = new TextView(context, attrs, android.R.attr.textViewStyle);
+			errorText.setGravity(Gravity.CENTER);
 			errorLayout = errorText;
 		} else {
 			errorLayout = inflater.inflate(errorLayoutId, null);
@@ -102,7 +103,6 @@ public class LoadingLayout extends FrameLayout {
 				throw new IllegalStateException("设置了error layout id，但是没设置error text id");
 			}
 		}
-		errorText.setGravity(Gravity.CENTER);
 		LayoutParams errorLP = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, true);
 		errorLP.gravity = Gravity.CENTER;
 		errorLayout.setVisibility(GONE);
